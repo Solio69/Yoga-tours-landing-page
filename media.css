@@ -1,0 +1,438 @@
+@media (max-width: 967px) {
+    .container {
+        padding: 0 15px;
+    }
+    .center__iner {
+        flex-direction: column;
+       
+    }
+    .center__imgs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .center__info {
+        padding-left: 0;
+    }
+    .center__title {
+        text-align: center;
+    }
+    .center__title2 {
+        text-align: center;
+    }
+    .center__list {
+        max-width: 100%;
+    }
+    .center__list li {
+        max-width: auto;
+    }
+    .center__text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 800px) {
+    .what__iner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }  
+    .what__text {
+        margin:0 auto;
+        padding-top: 20px;
+    }
+    .what__text__title p {
+            font-size: 18px;
+    }
+    .what__text__title p:last-child {
+            font-size: 25px;
+    }
+    .what__text__text {
+        margin-top: 15px;
+    }
+    .what__list {
+        margin-top: 10px;
+    }
+    .causes__title {
+        padding-top: 30px;
+    }
+    .causes__row {
+        margin-top: 30px;
+    }
+    .timetable__title {
+        margin: 30px 0; 
+    }
+    .ayurveda__title {
+        margin: 30px 0;
+    }
+    .ayurveda {
+        margin-bottom: 30px;
+    }
+    .instructors__title {
+        padding: 30px 0;
+    }
+    .instructors__item {
+        width: auto;
+    }
+    .instructors__name {
+        padding: 0 0 0 20px;
+    }
+    .instructors__text {
+        padding: 0 10px 0 0;
+        width: auto;
+    }
+    .reviews__title {
+        margin: 30px auto 60px;
+    }
+    .choose {
+        margin-top: 50px
+    }
+    .choose__title {
+        padding: 30px 0;
+    }
+    .choose__iner {
+        padding-bottom: 30px;  
+    }
+    .terms {
+        padding: 30px 0;
+    }
+    .terms__title2 {
+        padding: 30px 0;
+    }
+    
+    .terms__item {
+        max-width: none;
+        flex: 33%;
+        padding-top: 20px;
+    }
+    .cost__title {
+        padding: 30px 0;
+    }
+    .offer__text{
+        font-size: 16px;
+    }
+    .warranty__title {
+        padding: 30px 0 35px;
+    }
+    .warranty__text {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 770px) {
+    .cost__duration {
+        font-size: 16px; 
+    }
+    .cost__iner {
+        padding: 10px; 
+    }
+    .included__list {
+        padding: 0 10px 0 21px;
+    }
+    .not_included__list {
+        padding: 0 10px 0 21px; 
+    }
+    
+}
+@media (max-width: 700px) {
+    .header__title__title {
+        font-size: 30px;
+    } 
+    .header__title__text {
+        font-size: 18px;
+    }
+    .instructors__info {
+        width: auto;
+        height: auto;
+        padding: 10px 0;
+    }
+    .instructors__name {
+        height: auto;
+    }
+    .instructors__name p:first-child {
+        font-size: 21px;
+        padding-bottom: 0; 
+        line-height: 1.5;
+    }
+    .instructors__text {
+        height: auto;
+    }
+    .cost__wrapper {
+        padding: 15px 10px;
+    }
+    .cost__iner {
+        flex-wrap: wrap;
+    }
+    .cost__offer {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .offer__text {
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .documentation__iner {
+        padding: 0 10px;
+    }
+    .documentation__item {
+        flex: 50%;
+        padding-bottom: 15px;
+    }
+    .documentation__signature {
+        padding-top: 8px;
+    }
+    .contact__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .contact__iner {
+        flex-direction: column;
+    }
+    .offices {
+        flex-direction: column;
+    }
+    .contact__social {
+        width: 100%;
+    }
+    .contact__tel {
+        width: 100%;  
+    }
+    .map__address {
+        padding: 10px 0 25px;
+    }
+    .offices__map {
+        padding-right: 0;
+    }
+    .contact__title {
+        padding-top: 20px; 
+    }
+}
+
+@media (max-width: 620px) {
+    .program__item {
+        flex-direction: column;;
+    }
+    .program__text {
+        text-align: center;
+    }
+    .terms__item {
+        flex: 50%;
+    }
+    .terms__text {
+       font-size: 14px; 
+    }
+    .cost__iner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        line-height: 30px;
+    }
+    .payment {
+        padding: 30px 0 45px;
+    }
+    
+}
+
+@media (max-width: 571px) {
+    .instructors__text {
+        display: none; /*вернуть в виде слайдера*/
+    }
+    .instructors__info {
+       width: 100%; 
+    } /* оформить этот блок в виде слайдера с именем инструктора и тем чем он занимается */ 
+    
+    .foter__text {
+        padding-left: 10px;  
+    }
+}
+
+@media (max-width: 468px) {
+    .header__header {
+        padding-top: 0px;
+    }
+    .header__intro {
+        height: 100%;
+    }
+    .header__title__title {
+        font-size: 25px;
+        margin-top: 100px;
+    } 
+    .header__title__text {
+        text-align: center;
+        font-size: 15px;
+    }
+    .what__text__text {
+        margin-top: 0px;
+    }
+    .header__title__text2 {
+        text-align: center;
+    }
+    .header__title__btn {
+        font-size: 15px;
+        padding: 18px 63px;
+        margin-top: 50px;
+    }
+    .header__title__icon {
+        margin-top: 20px;
+    }
+    .what__iner {
+        padding: 20px 0;
+    }
+    .what__list li {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+    .causes__title {
+        font-size: 25px;
+        padding-top: 20px;
+    }
+    .causes__item {
+        margin-top: 0;
+    }
+    .timetable__title {
+        font-size: 25px;
+        margin: 20px 0 0;
+    }
+    .ayurveda__title {
+        margin: 20px 0 0;
+        font-size: 25px;
+    }
+    
+    .program__title {
+        margin: 20px 0 20px;
+        font-size: 25px;
+    }
+    .program__item {
+        margin-bottom: 18px;
+    }
+    .program__img {
+        padding-bottom: 8px;
+    }
+    .ayurveda {
+        margin-bottom: 20px;
+    }
+    .ayurveda__text {
+        font-size: 15px;
+    }
+    .center__title {
+        margin: 20px 0 10px;
+        font-size: 25px;
+    }
+    .center__title2 {
+        padding: 0 0 10px;
+    }
+    .center__list {
+        height: auto;
+        font-size: 15px;
+        
+    }
+    .center__list li {
+        max-width: 320px;
+        margin: 5px 0 0 0;
+    }
+    .instructors__title  {
+        font-size: 25px;
+        padding: 20px 0;
+    }
+    .instructors__item {
+        height: 350px;
+    }
+    .reviews__item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .reviews__info {
+        padding-left: 0;
+        text-align: center;
+    }
+    .reviews__name {
+        padding-top: 5px;
+    }
+    .reviews__title {
+        font-size: 25px;
+        margin: 30px auto 30px;
+    }
+    .choose__title {
+        font-size: 25px;
+        padding: 20px 0;
+    }
+    .choose__item {
+        margin: 15px 0 0;
+    }
+    .terms__title {
+        font-size: 25px;
+    }
+    .terms__title2 {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+    .terms__item {
+        flex: 100%;
+    }
+    .cost__title {
+        font-size: 25px;
+    }
+    .offer__text {
+        font-size: 14px;
+    }
+    .included__title {
+        font-size: 20px;
+        padding: 30px 0 20px;
+    }
+    .not_included__title {
+        font-size: 20px;
+        padding: 30px 0 20px;
+    }
+    .included__list {
+        font-size: 16px;
+    }
+    .not_included__list {
+        font-size: 16px; 
+    }
+    .payment {
+        font-size: 16px; 
+    }
+    .warranty__title {
+        font-size: 25px;
+        padding-bottom: 25px;
+    }
+    .documentation__title {
+        font-size: 20px;
+        padding: 30px 0;
+    }
+    .contact__wrapper {
+        justify-content: center;
+    }
+    .social__text {
+        padding: 10px 0 18px;
+    }
+    .contact__tel {
+        padding-top: 10px;
+    }
+    .contact__tel p:nth-child(3) {
+        font-size: 20px;
+    }
+    .footer__item a {
+        font-size: 12px;
+    }
+    .foter__text {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 350px) {
+    .footer__iner {
+        flex-direction: column;
+        padding: 3px 0;
+    }
+    
+    .footer__item {
+        width: 100%;  
+    }
+    .foter__text {
+        padding: 10px 0 0 10px;
+    }
+    
+}

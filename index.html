@@ -1,0 +1,544 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Дом солнца</title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <link href="media.css" rel="stylesheet" />
+    <link href="font/stylesheet.css" rel="stylesheet"  type = "text/css" />
+</head>
+<body>
+    <!--Sprite-->
+    <svg style="display: none">
+        <symbol id="vk" viewBox="0 0 512 512">
+            <g>
+                <path d="M425.614,86.344C382.172,42.91,322.258,16.066,255.96,16.066    c-66.297,0-126.212,26.844-169.654,70.277c-43.438,43.447-70.277,103.494-70.277,169.654c0,66.297,26.839,126.211,70.277,169.659    c43.442,43.438,103.357,70.276,169.654,70.276c66.298,0,126.212-26.839,169.654-70.276    c43.438-43.448,70.282-103.362,70.282-169.659C495.896,189.838,469.053,129.791,425.614,86.344z M412.332,412.498    C372.339,452.486,317.071,477.2,255.96,477.2s-116.379-24.714-156.372-64.702c-40.112-40.121-64.826-95.385-64.826-156.5    c0-61.107,24.714-116.375,64.826-156.363C139.581,59.646,194.849,34.8,255.96,34.8s116.379,24.847,156.372,64.835    c40.117,39.988,64.821,95.256,64.821,156.363C477.153,317.113,452.449,372.377,412.332,412.498z" />
+                <path d="M388.678,189.175c-3.586-2.654-16.471-2.654-29.224-2.654    c-13.021,0.265-26.044,0.265-29.101,1.462c-2.782,1.061-9.028,16.207-17.129,31.746c-9.308,17.545-20.593,34.547-27.771,34.272    c-9.43,0-7.168-28.826-6.506-50.209c0.128-13.954-2.129-18.474-4.121-19.661c-4.917-3.459-18.464-6.771-18.464-6.771    s-40.661-3.062-46.367,14.475c7.836,1.064,21.123-1.334,15.941,53.001c-0.397,2.664-6.246,24.979-25.111-5.181    c-4.784-7.566-22.846-52.869-29.224-53.134c-20.867-0.402-41.583-1.33-48.751,2.654c-6.781,3.989,9.028,35.072,35.734,76.793    c21.648,34.272,44.635,60.847,84.491,67.485c7.571,0.804,26.972,1.59,33.218-1.325c4.111-1.997-1.069-31.485,13.149-34.415    c6.246-1.191,30.549,30.828,39.714,34.415c5.594,2.257,17.811,3.185,30.298,2.649c13.552-0.393,28.954,1.335,30.416-7.963    c3.327-20.328-41.039-46.907-42.24-59.39c-1.065-9.033,16.211-25.637,24.974-38.394    C383.492,213.619,395.459,195.023,388.678,189.175z" />
+            </g>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 512 512">
+            <g>
+                <path d="M425.614,86.349C382.172,42.901,322.253,16.07,255.96,16.07    c-66.292,0-126.209,26.831-169.652,70.278c-43.443,43.445-70.279,103.359-70.279,169.652c0,66.29,26.836,126.209,70.279,169.652    c43.443,43.447,103.359,70.276,169.652,70.276c66.293,0,126.212-26.829,169.654-70.276    c43.443-43.443,70.282-103.362,70.282-169.652C495.896,189.708,469.058,129.794,425.614,86.349z M412.465,412.499    c-40.121,39.993-95.394,64.702-156.505,64.702c-61.109,0-116.379-24.709-156.367-64.702    C59.602,372.382,34.76,317.114,34.76,256.001c0-61.111,24.842-116.379,64.833-156.367c39.988-39.988,95.258-64.835,156.367-64.835    c61.111,0,116.384,24.847,156.505,64.835c39.988,39.988,64.698,95.256,64.698,156.367    C477.163,317.114,452.453,372.382,412.465,412.499z" />
+                <path d="M276,187.316c0-9.433,4.537-13.316,9.061-13.316    c4.382,0,28.939,0,28.939,0v-43h-39.307C232.58,131,222,164.729,222,184.925V204h-24v32.603V252h24c0,58,0,126,0,126h54    c0,0,0-68,0-126h32.705l1.595-18.752L313.225,204H276V187.316z" />
+            </g>
+
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 512 512">
+            <g><path d="M425.614,86.349C382.305,42.901,322.253,16.07,255.962,16.07    c-66.16,0-126.207,26.831-169.652,70.278c-43.445,43.445-70.282,103.359-70.282,169.652c0,66.29,26.836,126.209,70.282,169.652    c43.445,43.447,103.492,70.276,169.652,70.276c66.291,0,126.342-26.829,169.652-70.276    c43.443-43.443,70.282-103.362,70.282-169.652C495.896,189.708,469.058,129.794,425.614,86.349z M412.465,412.499    c-40.126,39.993-95.389,64.702-156.502,64.702c-60.979,0-116.379-24.709-156.365-64.702    c-39.993-40.117-64.835-95.385-64.835-156.498c0-61.111,24.842-116.379,64.835-156.367    c39.986-39.988,95.386-64.835,156.365-64.835c61.114,0,116.376,24.847,156.502,64.835c39.988,39.988,64.698,95.256,64.698,156.367    C477.163,317.114,452.453,372.382,412.465,412.499z" /><path d="M255.962,178.416c-42.78,0-77.585,34.805-77.585,77.585c0,42.915,34.805,77.59,77.585,77.59    c42.911,0,77.585-34.675,77.585-77.59C333.548,213.221,298.873,178.416,255.962,178.416z M255.962,317.513    c-33.877,0-61.379-27.502-61.379-61.512c0-33.877,27.501-61.512,61.379-61.512c34.01,0,61.511,27.635,61.511,61.512    C317.474,290.011,289.973,317.513,255.962,317.513z" /><path d="M319.466,136H192.594C161.374,136,135,161.274,135,192.633v126.876    C135,350.72,161.374,373,192.594,373h126.872C350.818,373,377,350.72,377,319.509V192.633C377,161.274,350.818,136,319.466,136z     M363,319.509C363,343.017,342.982,359,319.466,359H192.594C169.074,359,150,343.017,150,319.509V192.633    c0-23.52,19.074-42.633,42.594-42.633h126.872C342.982,150,363,169.113,363,192.633V319.509z" /><path d="M332.086,167.921c-6.909,0-12.487,5.578-12.487,12.484c0,6.911,5.578,12.49,12.487,12.49    c6.908,0,12.491-5.579,12.491-12.49C344.577,173.499,338.994,167.921,332.086,167.921z" /></g>
+        </symbol>
+    </svg>
+    <!--Header-->
+    <header>
+        <div class="header__intro">
+            <div class="container">
+                <div class="header__header">
+                    <div class="header__logo"><img src="img/logo.png" alt="logo" /></div>
+                    <div class="header__contact">
+                        <div class="header__contact__text">бесплатный звонок по России</div>
+                        <div class="header__contact__tel">8 (800) 505-35-87</div>
+                    </div>
+                </div>
+                <div class="header__title">
+                    <div class="header__title__title">Йога-туры в Индию</div>
+                    <div class="header__title__text">океан / йога / путешествия / аюрведа</div>
+                    <div class="header__title__text2">Индия, штат Керала, побережье океана</div>
+                    <a href="#" class="header__title__btn">Подать заявку</a>
+                    
+                    <div class="header__title__icon">
+                        <a href="#" target="_blank">
+                            <svg class="header__title__icon__img">
+                                <use xlink:href="#vk"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank">
+                            <svg class="header__title__icon__img">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank">
+                            <svg class="header__title__icon__img">
+                                <use xlink:href="#instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!--/ .container-->
+    </header> <!--/ .header-->
+    <!--What-->
+    <div class="what">
+        <div class="container">
+            <div class="what__iner">
+                <div class="what__picture">
+                    <img src="img/what-picture.jpg" alt=""/>
+                </div>
+                <div class="what__text">
+                    <div class="what__text__title">
+                        <p>Что такое</p>
+                        <p>йога-тур?</p>
+                    </div>
+                    <div class="what__text__text">
+                        Йога-тур – это новый вид туризма, когда с путешествием в другую страну сочетаются занятия по йоге. Вы отдыхаете на море, посещаете интересные места, несколько раз в день занимаетесь йогой и проводите отпуск в интересной компании. Теперь отдых стал интересным и полезным для тела и души.
+                    </div>
+                    <ul class="what__list">
+                        <li>йога</li>
+                        <li>море</li>
+                        <li>путешествие</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> <!--/ .what-->
+    <!--Causes-->
+    <div class="causes">
+        <div class="container">
+            <div class="causes__title title">5 причин поехать в йога-тур</div>
+            <div class="causes__row">
+                <div class="causes__item">
+                    <div class="causes__img"><img src="img/causes-item1.jpg" alt=""/></div>
+                    <div class="causes__text">Провести отпуск нестандартно и интересно</div>
+                </div>
+                <div class="causes__item">
+                    <div class="causes__img"><img src="img/causes-item2.jpg" alt=""/></div>
+                    <div class="causes__text">Погрузиться в культуру Индии и узнать страну изнутри</div>
+                </div>
+                <div class="causes__item">
+                    <div class="causes__img"><img src="img/causes-item3.jpg" alt=""/></div>
+                    <div class="causes__text">Улучшить здоровье</div>
+                </div>
+                <div class="causes__item">
+                    <div class="causes__img"><img src="img/causes-item4.jpg" alt=""/></div>
+                    <div class="causes__text">Избавиться от стрессов «перезагрузиться»</div>
+                </div>
+                <div class="causes__item">
+                    <div class="causes__img"><img src="img/causes-item5.jpg" alt=""/></div>
+                    <div class="causes__text">Отдохнуть в хорошей компании, найти единомышленников</div>
+                </div>
+            </div> <!--/ .causes__row-->
+        </div>
+    </div> <!--/ .causes-->
+        <!--Тут должен быть блок "Что меня ждет в путешествии?" (со слайдером который ты не умеешь делать)-->
+    <!--Timetable-->
+    <div class="timetable">
+        <div class="container">
+            <div class="timetable__title title">Расписание йога-туров</div>
+            <div class="timetable__row">
+                <div class="timetable__item">
+                    <div class="item__date">5-18 октября</div>
+                    <div class="item__name">"Снижение веса"</div>
+                    <div class="item__link"><a href="#">Читать подробнее</a></div>
+                    <div class="item__btn"><a href="#">оставить заявку</a></div>
+                </div>
+                <div class="timetable__item">
+                    <div class="item__date">5-18 октября</div>
+                    <div class="item__name">"Снижение веса"</div>
+                    <div class="item__link"><a href="#">Читать подробнее</a></div>
+                    <div class="item__btn"><a href="#">оставить заявку</a></div>
+                </div>
+                <div class="timetable__item">
+                    <div class="item__date">5-18 октября</div>
+                    <div class="item__name">"Снижение веса"</div>
+                    <div class="item__link"><a href="#">Читать подробнее</a></div>
+                    <div class="item__btn"><a href="#">оставить заявку</a></div>
+                </div>
+                <div class="timetable__item">
+                    <div class="item__date">5-18 октября</div>
+                    <div class="item__name">"Снижение веса"</div>
+                    <div class="item__link"><a href="#">Читать подробнее</a></div>
+                    <div class="item__btn"><a href="#">оставить заявку</a></div>
+                </div>
+                <div class="timetable__item">
+                    <div class="item__date">5-18 октября</div>
+                    <div class="item__name">"Снижение веса"</div>
+                    <div class="item__link"><a href="#">Читать подробнее</a></div>
+                    <div class="item__btn"><a href="#">оставить заявку</a></div>
+                </div>
+                <div class="timetable__item">
+                    <div class="item__date">5-18 октября</div>
+                    <div class="item__name">"Снижение веса"</div>
+                    <div class="item__link"><a href="#">Читать подробнее</a></div>
+                    <div class="item__btn"><a href="#">оставить заявку</a></div>
+                </div>
+                <div class="timetable__item">
+                    <div class="item__date">5-18 октября</div>
+                    <div class="item__name">"Снижение веса"</div>
+                    <div class="item__link"><a href="#">Читать подробнее</a></div>
+                    <div class="item__btn"><a href="#">оставить заявку</a></div>
+                </div>
+                <div class="timetable__item">
+                    <div class="item__date">5-18 октября</div>
+                    <div class="item__name">"Снижение веса"</div>
+                    <div class="item__link"><a href="#">Читать подробнее</a></div>
+                    <div class="item__btn"><a href="#">оставить заявку</a></div>
+                </div>
+            </div> <!--/ .timetable__row-->
+        </div>
+    </div> <!--/ .timetable-->
+    <!--Тут должен быть блок "Программа" (со слайдером который ты не умеешь делать)-->
+    <!--Ayurveda-->
+    <div class="ayurveda">
+        <div class="container">
+            <div class="ayurveda__title title">Что такое аюрведа?</div>
+            <div class="ayurveda__text">
+                <p>Аюрведа - это древнейшая медицинская наука в мире, колоссальная технология восстановления сил, красоты и здоровья. Она зародилась на юге Индии 5000 лет назад и сейчас широко распространилась по миру.</p>
+                <p>
+                    Аюрведа в последнее время стремительно набирает популярность в России и во всем мире. <br />
+                    Аюрведа лечит весь организм в целом, восстанавливает нарушенный баланс между его частями, удаляя саму причину болезни. Цель аюрведического метода лечения - укрепление иммунной системы организма, профилактика и лечение заболеваний с помощью натуральных лекарств, не имеющих побочных эффектов.
+                </p>
+            </div>
+            <div class="program__title">Программа аюрведы на 5 дней, 7 дней или 12 дней:</div>
+            <div class="ayurveda__program">
+                <div class="program__item">
+                    <div class="program__img"><img src="img/ayurveda1.jpg" alt=""/></div>
+                    <div class="program__text">
+                        индивидуальная консультация врача-аювредиста
+                        с переводом на русский язык, индивидуальное наблюдение за курсом лечения врачом-аюрведистом
+                    </div>
+                </div>
+                <div class="program__item">
+                    <div class="program__img"><img src="img/ayurveda2.jpg" alt=""/></div>
+                    <div class="program__text">масляный массаж всего тела ежедневно (60 минут) в 2 руки или в 4 руки</div>
+                </div>
+                <div class="program__item">
+                    <div class="program__img"><img src="img/ayurveda3.jpg" alt=""/></div>
+                    <div class="program__text">две аюрведические процедуры ежедневно по Вашему индивидуальному курсу лечения</div>
+                </div>
+                <div class="program__item">
+                    <div class="program__img"><img src="img/ayurveda4.jpg" alt=""/></div>
+                    <div class="program__text">все медицинские препараты и масла в ходе процедур, одежда для процедур</div>
+                </div>
+                <div class="program__item">
+                    <div class="program__img"><img src="img/ayurveda5.jpg" alt=""/></div>
+                    <div class="program__text">итоговая консультация врача-аюрведиста с планом продолжения приема препаратов дома, рекомендаций по диете</div>
+                </div>
+            </div> <!--/ .ayurveda__program-->
+        </div>
+    </div> <!--/ .ayurveda-->
+        <!--Center-->
+        <div class="center">
+            <div class="container">
+                <div class="center__background"></div> <!--В этом диве надо сделать прямоугольник с фоном -->
+                <div class="center__iner">
+                    <div class="center__imgs">
+                        <!---надо сделать что бы картинки всплывали и увеличивались при клике-->
+                        <img src="img/center1.jpg" alt=""/>
+                        <img src="img/center2.jpg" alt=""/>
+                        <img src="img/center3.jpg" alt=""/>
+                        <img src="img/center4.jpg" alt=""/>
+                        <img src="img/center5.jpg" alt=""/>
+                        <img src="img/center6.jpg" alt=""/>
+                        <img src="img/center7.jpg" alt=""/>
+                        <img src="img/center8.jpg" alt=""/>
+                        <img src="img/center9.jpg" alt=""/>
+                        <img src="img/center10.jpg" alt=""/>
+                        <img src="img/center11.jpg" alt=""/>
+                        <img src="img/center12.jpg" alt=""/>
+                    </div>
+    
+                    <div class="center__info">
+                        <div class="center__title">Аюрведический центр</div>
+                        <div class="center__title2">Индия, штат Керала, город Варкала</div>
+                        <div class="center__text">
+                            <p>Мы будем жить не просто в отеле, а в специализированном аюрведическом центре «Алисера». Здесь все проходят лечение или занимаются йогой – это тихое и закрытое для посторонних отдыхающих людей местечко.</p>
+                            <p> Центр находится на первой пляжной линии в зеленом и спокойном месте, поодаль от шумных баров и магазинов.</p>
+                            <p> Этот аюрведический центр уже 5 лет администрируют русские специалисты - это значит, что они стараются обеспечить сервис на уровне, привычном русскому туристу. Вас не шокирует грязь и антисанитария Индии, которой многие боятся, не будет недопониманий с персоналом, еда будет адаптирована для привычного вкуса русского туриста и т.д. В центре постоянно есть переводчик с английского на русский язык. Отдыхают здесь в основном гости из России – поэтому всегда можно найти интересное общение, если вы приехали один или маленькой компанией.</p>
+                        </div>
+                        <ul class="center__list">
+                            <li>комнаты категории «стандарт» и «повышенной комфортности» с санузлом и горячей водой</li>
+                            <li>собственная территория с пальмами, гамаками и зонами для отдыха</li>
+                            <li>бассейн</li>
+                            <li>крытый зал для йоги</li>
+                            <li>вегетарианское аюрведическое кафе</li>
+                            <li>аюрведические кабинеты</li>
+                            <li>собственный пляж</li>
+                            <li>Wi-Fi на всей территории бесплатно</li>
+                            <li>русскоговорящий администратор</li>
+                            <li>туристический офис - билеты, экскурсии и т.д.</li>
+                            <li>круглосуточно врач</li>
+                            <li>аренда скутеров</li>
+                            <li>заказ такси</li>
+                            <li>сейф</li>
+                        </ul>
+                    </div> <!--/ .center__info-->
+                </div> <!--/ .center__iner-->
+            </div> <!--/ .container-->
+        </div> <!--/ .center-->
+        <!--Instructors-->
+    <div class="instructors">
+        <div class="container">
+            <div class="instructors__title title">Инструкторы</div>
+            <div class="instructors__item">
+                <div class="instructors__info">
+                    <div class="instructors__name">
+                        <p>Юлия Ухваткина</p>
+                        <p>Хатха-йога</p>
+                        <p>Шри-шри йога</p>
+                    </div>
+                    <div class="instructors__text">
+                        <p>Международный индийский сертификат учителя йоги: VED VIGNAN MAHA VIDYA PEETH.</p>
+                        <p>Ежегодно проходит курсы повышения квалификации в России и в Индии.</p>
+                        <p>Переводчик с английского языка</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="instructors__item item2">
+                <div class="instructors__info">
+                    <div class="instructors__name">
+                        <p>Сем Джон</p>
+                        <p>Индия. Шри-шри йога.</p>
+                        <p>Курс «Счастье»</p>
+                    </div>
+                    <div class="instructors__text">
+                        <p>Более 10 лет ведет тренинги по йоге по всей Индии. </p>
+                        <p>С 2009-го года преподаватель йоги международного фонда Art of living.</p>
+                        <p>Обучает пранаяме, дыхательным техникам и медитации.</p>
+                        <p>Читает лекции о теории и философии йоги.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div> <!--/ .container-->
+    </div> <!--/ .instructors-->
+    <!--Reviews--> <!--тут должен быть с лайдер с другими отзывами, других отзывовов в макете нет, но надо сделать хотя бы слайдер-->
+    <div class="reviews">
+        <div class="container">
+            <div class="reviews__title title">Отзывы участников</div>
+            <div class="reviews__item">
+                <div class="reviews__img"><img src="img/review1.jpg" alt=""/></div>
+                <div class="reviews__info">
+                    <div class="reviews__name">Дмитрий Жигарев</div>
+                    <div class="reviews__link"><a href="#">vk.com/zhigarev_dmitrii</a></div>
+                    <div class="reviews__text">Мне, как всегда в этой жизни везет на встречи с интересными людьми. Было очень приятно попасть в такую хорошую компанию искренних, позитивных и интересных людей. Индия классная страна… интересно было соприкоснуться с такой культурой. Иногда она шокирует, иногда вызывают улыбку и удивление, но я пожелал бы каждому побывать в этой экстраординарной стране. Я отдохнул и душой и телом. Постараюсь приехать туда еще не раз…</div>
+                </div>
+            </div>
+        </div>
+    </div> <!--/ .reviews-->
+    <!--Choose-->
+    <div class="choose">
+        <div class="container">
+            <div class="choose__title title">Почему 1620 туристов выбрали нас</div>
+            <div class="choose__iner">
+                <div class="choose__item">
+                    <div class="choose__icon"><img src="img/choose1.png" alt=""/></div>
+                    <div class="choose__item__title">Опыт</div>
+                    <div class="choose__item__text">За 5 лет работы мы открыли мир йоги для более чем 1620 туристов</div>
+                </div>
+                <div class="choose__item">
+                    <div class="choose__icon"><img src="img/choose2.png" alt=""/></div>
+                    <div class="choose__item__title">С нами спокойно</div>
+                    <div class="choose__item__text">
+                        Русскоговорящее сопровождение – инструктор и переводчик будет с вами в течении всего тура
+                    </div>
+                </div>
+                <div class="choose__item">
+                    <div class="choose__icon"><img src="img/choose3.png" alt=""/></div>
+                    <div class="choose__item__title">Мы — профессионалы</div>
+                    <div class="choose__item__text">
+                        Мы — самая большая компания в России, которая занимается исключительно йога-турами
+                    </div>
+                </div>
+                <div class="choose__item">
+                    <div class="choose__icon"><img src="img/choose4.png" alt=""/></div>
+                    <div class="choose__item__title">С нами выгодно</div>
+                    <div class="choose__item__text">Наш принцип – делать  цены на йога-туры  доступными для всех</div>
+                </div>
+                <div class="choose__item">
+                    <div class="choose__icon"><img src="img/choose5.png" alt=""/></div>
+                    <div class="choose__item__title">С нами безопасно</div>
+                    <div class="choose__item__text">Вы получаете весь пакет  официальных  туристических документов</div>
+                </div>
+                <div class="choose__item">
+                    <div class="choose__icon"><img src="img/choose6.png" alt=""/></div>
+                    <div class="choose__item__title">С нами удобно </div>
+                    <div class="choose__item__text">Мы поможем забронировать  авиа-билеты  и оформить визу</div>
+                </div>
+            </div> <!--/ .choose__iner-->
+        </div> <!--/ .container-->
+    </div> <!--/ .choose-->
+    <!--Terms--> <!--в этом блоке нехвататет стрелочек (между terms__item)  показывающих последовательность действий (см. макет)-->
+    <div class="terms">
+        <div class="container">
+            <div class="terms__title title">Как мы работаем</div>
+            <div class="terms__title2">Возможно оформление йога-тура дистанционно из любого города</div>
+            <div class="terms__iner">
+                <div class="terms__item">
+                    <div class="terms__icon"><img src="img/terms1.png" alt=""/></div>
+                    <div class="terms__text">
+                        <p>Вы оставляете заявку</p>
+                        <p><a href="#">Отправить заявку</a></p>
+                    </div>
+                </div>
+                <div class="terms__item">
+                    <div class="terms__icon"><img src="img/terms2.png" alt=""/></div>
+                    <div class="terms__text">Мы связываемся  с вами </div>
+                </div>
+                <div class="terms__item">
+                    <div class="terms__icon"><img src="img/terms3.png" alt=""/></div>
+                    <div class="terms__text">Подписываем договор  и оформляем  документы</div>
+                </div>
+                <div class="terms__item">
+                    <div class="terms__icon"><img src="img/terms4.png" alt=""/></div>
+                    <div class="terms__text">Вы оплачиваете аванс   6 000 рублей  в банке</div>
+                </div>
+                <div class="terms__item">
+                    <div class="terms__icon"><img src="img/terms5.png" alt=""/></div>
+                    <div class="terms__text">Покупаете билеты  и оформляете визу (возможно через нас)</div>
+                </div>
+                <div class="terms__item">
+                    <div class="terms__icon"><img src="img/terms6.png" alt=""/></div>
+                    <div class="terms__text">Вас встречают  в аэропорту Тривандрум с табличкой</div>
+                </div>
+            </div> <!--/ .terms__iner-->
+        </div>
+    </div> <!--/ .terms-->
+    <!--Cost-->
+    <div class="cost">
+        <div class="container">
+            <div class="cost__title title">Стоимость</div>
+            <div class="cost__wrapper">
+                <div class="cost__iner">
+                    <div class="cost__duration"><span>Тур 14 дней/13 ночей</span>, программа аюрведы на 5 дней</div>
+                    <div class="cost__tours"><span>700</span> евро</div>
+                </div>
+                <div class="cost__iner">
+                    <div class="cost__duration"><span>Тур 14 дней/13 ночей</span>, программа аюрведы на 7 дней</div>
+                    <div class="cost__tours"><span>770</span> евро</div>
+                </div>
+                <div class="cost__iner">
+                    <div class="cost__duration"><span>Тур 14 дней/13 ночей</span>, программа аюрведы на 12 дней</div>
+                    <div class="cost__tours"><span>960</span> евро</div>
+                </div>
+            </div>
+            
+            <div class="cost__offer">
+                <div class="offer__text">Узнайте о спецпредложении эконом-тур за 250 евро</div>
+                <a class="offer__btn" href="#">узнать</a>
+            </div>
+
+            <div class="included__title">В стоимость включено:</div>
+            <div class="included__list">
+                <ul>
+                    <li>проживание двухместное в комнате "стандарт" с санузлом и горячей водой,</li>
+                    <li>питание трехразовое вегетарианское,</li>
+                    <li>йога-программа - 3 занятия йоги в день (практика и теория),</li>
+                    <li>аюрведическая программа на 5 дней, 7 дней или 12 дней, </li>
+                    <li>индивидуальный трансфер на такси из аэропорта до отеля и обратно,</li>
+                    <li>сопровождение группы русскоговорящим преподавателем,</li>
+                    <li>теоретические занятия по аюрведе,</li>
+                    <li>две экскурсии</li>
+                </ul>
+            </div>
+
+            <div class="not_included__title">В стоимость НЕ входит:</div>
+            <ul class="not_included__list">
+                <li>перелет Москва-Тируванантапурам-Москва (от 20 000 рублей)</li>
+                <li>виза (3000 рублей)</li>
+            </ul>
+            <div class="payment">
+                Стоимость рассчитывается в евро из-за нестабильного курса рубля. Оплата на месте возможна в любой валюте – рубли, евро, доллары.
+            </div>
+
+        </div>
+    </div>
+    <!--Warranty-->
+    <div class="warranty">
+        <div class="warranty__title title">Гарантия безопасности</div>
+        <div class="warranty__text">Мы понимаем, что многие туристы опасаются оплачивать туры и боятся, что тур отменится. Поэтому мы сделали бронирование безопасным для вас. Чтобы забронировать место на йога-туре необходимо любым удобным способом внести аванс 6000 рублей. Оставшуюся сумму вы оплачиваете в любой валюте (рубли, евро, доллары) по прибытию в отель, после заселения. </div>
+        <div class="documentation__title">Вы получите полный набор документов:</div>
+        <div class="documentation__iner">
+            <div class="documentation__item">
+                <div class="documentation__img"><img src="img/documentation1.jpg" alt=""/></div>
+                <div class="documentation__signature">Договор на оказание услуг</div>
+            </div>
+            <div class="documentation__item">
+                <div class="documentation__img"><img src="img/documentation2.jpg" alt=""/></div>
+                <div class="documentation__signature">Чек об оплате аванса</div>
+            </div>
+            <div class="documentation__item">
+                <div class="documentation__img"><img src="img/documentation3.jpg" alt=""/></div>
+                <div class="documentation__signature">Бронь отеля</div>
+            </div>
+            <div class="documentation__item">
+                <div class="documentation__img"><img src="img/documentation4.jpg" alt=""/></div>
+                <div class="documentation__signature">Туристический сертификат</div>
+            </div>
+        </div>
+    </div> <!--/ .warranty-->
+    <!--Contact-->
+    <div class="contact">
+        <div class="container">
+            <div class="contact__wrapper"> 
+                <div class="contact__item"> <!--Этот блок на маленьком экране (468) должен сворачиваться на JS-->
+                    <div class="contact__title">Контакты</div>
+                    <div class="contact__iner">
+                        <div class="contact__social">
+                            <div class="social__text">Мы в социальных сетях:</div>
+                            <div class="social__icon">
+                                <a href="#" target="_blank">
+                                    <svg class="social__icon__img">
+                                        <use xlink:href="#vk"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <svg class="social__icon__img">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <svg class="social__icon__img">
+                                        <use xlink:href="#instagram"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="contact__tel">
+                            <p>Телефон:</p>
+                            <p>Звонки со всех номеров РФ бесплатно </p>
+                            <p>8 800 505 35 87 </p>
+                        </div>
+                    </div>
+                </div> <!--/ .contact__item-->
+                <div class="contact__item"> <!--Этот блок на маленьком экране (468) должен сворачиваться на JS-->
+                    <div class="offices__title">Офисы:</div>
+                    <div class="offices">
+                        <div class="offices__map">
+                            <div class="map__img"><img src="img/map1.jpg" alt=""/></div>
+                            <div class="map__address">Екатеринбург, ул Вайнера 60</div>
+                        </div>
+                        <div class="offices__map">
+                            <div class="map__img"><img src="img/map2.jpg" alt=""/></div>
+                            <div class="map__address">Санкт-Петербург, пер. Литейный 29</div>
+                        </div>
+                        <div class="offices__map">
+                            <div class="map__img"><img src="img/map3.jpg" alt=""/></div>
+                            <div class="map__address">Сочи, ул Декабристов 161/2</div>
+                        </div>
+                    </div>
+                </div><!--/ .contact__item-->
+            </div> <!--. /contact__wrapper-->
+        </div> <!--/ .container-->
+    </div> <!--/ .contact*-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__iner">
+                <div class="footer__item">
+                    <div class="footer__logo"><img src="img/logo.png" alt=""/></div>
+                    <div class="foter__text">
+                        <p>Все наши йога-туры на главном сайте</p>
+                        <a href="#">www.yogamore.ru </a>
+                    </div> 
+                </div>
+                <div class="footer__item">
+                    <div class="foter__text">
+                        <p>ИП Шубина А.В.</p>
+                        <p>свидетельство о регистрации 66 №007073343 от 6 марта 2013 года. ОГРН 313667006500023. ИНН: 665904891650</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
